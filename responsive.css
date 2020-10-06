@@ -1,0 +1,28 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	h1{
+		text-align: center;
+		padding-top: 20px;
+		font-family: oleo-regular;
+		font-size: 70px;
+		text-shadow: 2px 2px 5px #E833DC /*black*/;
+	}
+	h3{
+		font-family: pridi-extra-light;
+		text-align: center;
+		padding-top: 5px;
+		font-size: 30px;
+	}
+	span{
+		color: #EB3BE1;
+		font-size: 30px;
+		font-family: oleo-regular;
+		text-shadow: 2px 2px 2px black;
+	}
+	h4{
+	    font-family: pridi-extra-light;
+		text-align: center;
+		padding-top: 0px;
+		font-size: 25px;
+	}
+}

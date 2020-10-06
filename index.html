@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    	<meta name="viewport" content="width= device-width, initial-scale=1.0">
+    	<link rel="stylesheet" type="text/css" href="style.css">
+    	<link rel="stylesheet" type="text/css" href="responsive.css">
+	<title>Easy Math v1</title>
+</head>
+<body> 
+	<h1>GAME MATH</h1>
+	<h3>Name: <span id="myname">null</span></h3>
+	<h4>Point: <span id="point">0</span></h4>
+
+	<div class="btns">
+		<button id="CP" onclick="clearPoint()">Clear Point</button>
+		<button id="CAD" onclick="clearAllData()">Clear All Data</button>
+	</div>
+	<div class="contain">
+		<div id="num"></div>
+		<input type="Number" id="answer">
+	</div>
+
+	<button id="check" onclick="check()">Check</button>
+	
+	
+	<script type="text/javascript">
+		let name = localStorage.getItem("Name");
+		//document.getElementById("myname").innerHTML = name;
+		let point = localStorage.getItem("Point")
+		//document.getElementById("point").innerHTML = point;
+		document.getElementById("myname").innerHTML = name;
+		document.getElementById("point").innerHTML = point;
+
+		while(name == "" || name == null) {
+			if (name == "" || name == null) {
+				name = prompt("Enter Your Name")
+				localStorage.setItem("Name", name)
+				
+				document.getElementById("myname").innerHTML = name;
+
+				point = 0
+				localStorage.setItem("Point", point)
+				document.getElementById("point").innerHTML = point;
+			}
+			
+			// if (localStorage.setItem("Name", name) == "" || localStorage.setItem("Name", name) == null){
+			// 	localStorage.clear()
+			// 	name = prompt("Enter Name")
+			// }else{
+			// 	localStorage.getItem("Name", name)
+			//} 			
+		}
+		//Setting Numbers
+		let num1, num2, total, sum;
+		num1 = parseInt(Math.random()*10) +1;
+		num2 = parseInt(Math.random()*10) +1;
+		if (num1 <= num2) {
+			total = num1 + num2
+			document.getElementById("num").innerHTML= num1 + " + " + num2 + " = "
+		}else{
+			total = num1 - num2
+			document.getElementById("num").innerHTML= num1 + " - " + num2 + " = "
+			sum = document.getElementById("answer").value
+		}
+		let Point = localStorage.getItem("point");
+		document.getElementById('point').innerHTML = point;
+
+		function check() {
+			sum = document.getElementById("answer").value
+			if (sum == total) {
+				point = parseInt(point) + 1
+				localStorage.setItem("Point", point)
+				document.getElementById("point").innerHTML = point
+			 	alert("Yeeehh!!!")
+			 	window.location.href=""
+			}
+			else{
+				point = parseInt(point)
+				localStorage.setItem("Point", point)
+				document.getElementById("point").innerHTML = point
+			 	alert("Oops")
+			 	window.location.href=""
+			}
+		}
+		function clearPoint() {
+			point = 0;
+			localStorage.setItem("Point",point);
+			document.getElementById('point').innerHTML = point;
+			window.location.href="";
+		}
+
+		function clearAllData() {
+			localStorage.clear();
+			window.location.href="";
+		}
+
+		</script>
+</body>
+</html>

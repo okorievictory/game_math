@@ -1,0 +1,82 @@
+@font-face {
+  font-family: pridi-bold;
+  src: url(fonts/pridi/Pridi-Bold.ttf);
+}
+@font-face {
+  font-family: pridi-light;
+  src: url(fonts/pridi/Pridi-Light.ttf);
+}
+@font-face {
+  font-family: pridi-extra-light;
+  src: url(fonts/pridi/Pridi-ExtraLight.ttf);
+}
+@font-face {
+  font-family: oleo-regular;
+  src: url(fonts/oleo/OleoScript-Regular.ttf);
+}
+body{
+	margin: 0px;
+	padding: 0px;
+	background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("brain.jpg")no-repeat center;
+	color: #F1EF09;
+}
+h1{
+	text-align: center;
+	padding-top: 20px;
+	font-family: oleo-regular;
+	font-size: 50px;
+	text-shadow: 2px 2px 5px #E833DC /*black*/;
+}
+h3{
+	font-family: pridi-extra-light;
+	text-align: center;
+	padding-top: 5px;
+	font-size: 20px;
+}
+span{
+	color: #EB3BE1;
+	font-size: 25px;
+	font-family: oleo-regular;
+	text-shadow: 2px 2px 2px black;
+}
+h4{
+    font-family: pridi-extra-light;
+	text-align: center;
+	padding-top: 0px;
+	font-size: 25px;
+}
+button#CP{
+	background: linear-gradient(rgba(232,51,220),rgba(240,224,25));
+	padding: 10px 20px 10px 20px;
+	border: 1px solid;
+	border-radius: 10%;
+}
+button#CAD{
+	background: linear-gradient(rgba(232,51,220),rgba(240,224,25));
+	padding: 10px 20px 10px 20px;
+	border: 1px solid;
+	border-radius: 10%;
+}
+div.btns{
+	text-align: center;
+	/*justify-content: space-around;*/
+}
+button#check{
+	background: linear-gradient(rgba(240,224,25),rgba(232,51,220));
+	padding: 13px 30px 13px 30px;
+	border: 1px solid;
+	float: right;
+	margin: 100px 150px 0px 0px;
+	border-radius: 10%;
+}
+div.contain{
+	display: flex;
+	padding-left: 44%;
+	padding-top: 40px;
+}
+div#num{
+	font-size: 30px;
+}
+input#answer{
+	width: 6%
+}
